@@ -26,4 +26,64 @@ Label recognition was done in the same manner as text recognition, with some min
 Similar to the text and label recognition, an SVM was used to classify a HOG descriptor The one difference was these characters were segmented using blobbing which returns a far cleaner outline. For this reason the resulting performance was signifigantly better.
 
 ## Results
-The identifier was effective under a range of backgrounds and conditions, but struggled were lighting conditions were not optimal.
+The identifier was effective under a range of backgrounds and conditions, but struggled were lighting conditions were not optimal. Below are some results from a test set:
+
+<table align="center">
+  <tr>
+    <th>Image</th>
+    <th>Output</th> 
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/swithers19/Hazmat-Label-Identifier/master/test-images/Oxidizer.JPG" width="auto" height="250"/>
+    </td>
+    <td>
+      <pre>
+       <br/>top: yellow<br/>bottom: yellow<br/>class: 5.1<br/>text: OXIDIZER<br/>symbol: Oxidiser
+      </pre>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/swithers19/Hazmat-Label-Identifier/master/test-images/Radioactive.JPG" width="auto" height="250"/>
+    </td>
+    <td>
+      <pre>
+       <br/>top: yellow<br/>bottom: white<br/>class: 7<br/>text: RADIOACTIVE III<br/>symbol: Radioactive
+      </pre>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/swithers19/Hazmat-Label-Identifier/master/test-images/Corrosive-no-text.jpg" width="auto" height="250"/>
+    </td>
+    <td>
+      <pre>
+       <br/>top: white<br/>bottom: black<br/>class: 8<br/>text: None<br/>symbol: Corrosive
+      </pre>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/swithers19/Hazmat-Label-Identifier/master/test-images/Combustible.JPG" width="auto" height="250"/>
+    </td>
+    <td>
+      <pre>
+       <br/>top: red<br/>bottom: red<br/>class: 3<br/>text: COMBUSTIBLE<br/>symbol: Flame
+      </pre>
+    </td> 
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/swithers19/Hazmat-Label-Identifier/master/test-images/InhalationHazard.JPG" width="auto" height="250"/>
+    </td>
+    <td>
+      <pre>
+       <br/>top: white<br/>bottom: white<br/>class: 2<br/>text: INHALATION HAZARD<br/>symbol: Skull and crossbones on black diamond
+      </pre>
+    </td> 
+  </tr>
+</table>
+
+
+
